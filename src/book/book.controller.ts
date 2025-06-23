@@ -46,4 +46,4 @@ export class BookController {
   async delete(@Param('id') id: string) {
     return this.service.delete(Number(id));
   }
-} 
+}

@@ -27,7 +27,7 @@ export class UpdateBookDto {
   @Max(new Date().getFullYear(), { message: 'O ano não pode ser no futuro.' })
   year?: number;
 
-  @IsString({ message: 'O autor deve ser uma string.' })
   @IsOptional()
+  @IsString({ message: 'O autor deve ser uma string.' })
   author?: string;
 }

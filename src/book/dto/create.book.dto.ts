@@ -28,6 +28,7 @@ export class CreateBookDto {
   @Max(new Date().getFullYear(), { message: 'O ano não pode ser no futuro.' })
   year: number;
 
+
   @IsString({ message: 'O autor deve ser uma string.' })
   @IsNotEmpty({ message: 'O autor é obrigatório.' })
   @MinLength(2, { message: 'O nome do autor deve ter no mínimo 2 caracteres.' })
