@@ -31,3 +31,5 @@ export class UpdateBookDto {
   @IsString({ message: 'O autor deve ser uma string.' })
   author?: string;
 }
+
+

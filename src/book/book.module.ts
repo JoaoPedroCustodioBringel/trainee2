@@ -12,6 +12,3 @@ import { BookMapper } from './mapper/book.mapper';
 })
 export class BookModule { }
 
-
-
-

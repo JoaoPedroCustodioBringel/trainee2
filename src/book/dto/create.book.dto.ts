@@ -35,3 +35,4 @@ export class CreateBookDto {
   @MaxLength(100, { message: 'O nome do autor deve ter no máximo 100 caracteres.' })
   author: string;
 }
+
