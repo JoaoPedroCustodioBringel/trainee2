@@ -11,13 +11,15 @@ import { BookService } from './book.service';
 import { CreateBookDto } from './dto/create.book.dto';
 import { UpdateBookDto } from './dto/update.book.dto';
 import { BookMapper } from './mapper/book.mapper';
+import { ContainslivroPipe } from './pipes/contains-livro.pipe';
+
 
 @Controller('books')
 export class BookController {
   constructor(private readonly service: BookService) { }
 
   @Post()
-  async create(@Body() dto: CreateBookDto) {
+  async create(@Body(ContainslivroPipe) dto: CreateBookDto) {
     const book = await this.service.create(dto);
     return BookMapper.toResponse(book);
   }
